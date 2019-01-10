@@ -34,7 +34,7 @@ namespace FlashCard.Models
 
         public StudySetItems() {}
 
-        public StudySetItems(string title, string cardId, string term, string definition, Boolean isStared, string eTag)
+        public StudySetItems(string title, string cardId, string term, string definition, bool isStared, string eTag)
         {
             CardId = cardId;
             Title = title;
@@ -46,5 +46,15 @@ namespace FlashCard.Models
             AssignPartitionKey();
         }
 
+        public StudySetItems(string title, string cardId, string term, string definition, bool isStared)
+        {
+            CardId = cardId;
+            Title = title;
+            Term = term;
+            Definition = definition;
+            Stared = isStared;
+            AssignRowKey();
+            AssignPartitionKey();
+        }
     }
 }

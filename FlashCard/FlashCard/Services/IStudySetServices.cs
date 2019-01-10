@@ -12,7 +12,8 @@ namespace FlashCard.Services
     {
         StudySetItems AddStudySetItems(StudySetItems items);
 
-        ActionResult<List<StudySetItems>> GetStudySetItems();
+        ActionResult<List<StudySetItems>> GetStudySetList();
+        ActionResult<StudySetItems> GetStudySetItem(string cardId);
 
     }
 }

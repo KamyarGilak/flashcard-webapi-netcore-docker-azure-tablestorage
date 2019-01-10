@@ -13,15 +13,11 @@ namespace FlashCard.Controllers
     [ApiController]
     public class StudySetController : ControllerBase
     {
-
         private readonly IStudySetServices _studySetServices;
-
         public StudySetController(IStudySetServices studySetServices)
         {
             _studySetServices = studySetServices;
         }
-
-
 
         // GET StudySets
         [HttpGet]
@@ -29,7 +25,7 @@ namespace FlashCard.Controllers
 
         public ActionResult<List<StudySetItems>> GetStudySetItems()
         {
-            var studySetItems = _studySetServices.GetStudySetItems();
+            var studySetItems = _studySetServices.GetStudySetList();
             if (studySetItems.Value.Count == 0)
             {
                 return NotFound();
@@ -53,13 +49,18 @@ namespace FlashCard.Controllers
 
         }
 
-        //        // GET api/values/5
-        //        [HttpGet("{id}")]
-        //        public ActionResult<string> Get(int id)
-        //        {
-        //            return "value";
-        //        }
-        //
+        // GET api/values/5
+        [HttpGet("studysets/{cardId}")]
+        public ActionResult<StudySetItems> Get(string cardId)
+        {
+            var studySetItems = _studySetServices.GetStudySetItem(cardId);
+            if (studySetItems == null)
+            {
+                return NotFound();
+            }
+            return studySetItems;
+        }
+        
 
 
         //        // PUT api/values/5
