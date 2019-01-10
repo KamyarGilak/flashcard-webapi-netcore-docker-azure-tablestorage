@@ -22,3 +22,5 @@ vue-flashcards/*.sw*
 
 # Editor directories and files BackEnd
 FlashCard/.vs
+FlashCard/FlashCard/bin
+FlashCard/FlashCard/obj
