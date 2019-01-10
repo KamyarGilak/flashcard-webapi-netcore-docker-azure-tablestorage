@@ -11,7 +11,7 @@ vue-flashcards/npm-debug.log*
 vue-flashcards/yarn-debug.log*
 vue-flashcards/yarn-error.log*
 
-# Editor directories and files
+# Editor directories and files FrontEnd
 vue-flashcards/.idea
 vue-flashcards/.vscode
 vue-flashcards/*.suo
@@ -19,3 +19,6 @@ vue-flashcards/*.ntvs*
 vue-flashcards/*.njsproj
 vue-flashcards/*.sln
 vue-flashcards/*.sw*
+
+# Editor directories and files BackEnd
+FlashCard/.vs
