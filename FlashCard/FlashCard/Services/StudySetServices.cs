@@ -14,8 +14,8 @@ namespace FlashCard.Services
     public class StudySetServices : IStudySetServices
     {
 
-        private const string StorageAccountName = "webapptest001storage";
-        private const string StorageAccountKey = "yj/8YhYrSs67VOhaSUcV/+DP4wMGQ689IgjVq+aD+w/GWn1CllB3Vfp3EcMXrfo7wWgcal2S795rrGMh9zpwXA==";
+        private const string StorageAccountName = "YOUR-ACCOUNT-NAME";
+        private const string StorageAccountKey = "YOUR-ACCOUNT-KEY";
 
         private readonly CloudStorageAccount _storageAccount = new CloudStorageAccount(new StorageCredentials(StorageAccountName, StorageAccountKey), true);
         private CloudTable _studySetTable;
